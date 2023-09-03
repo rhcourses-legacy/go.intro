@@ -1,0 +1,5 @@
+name: go-intro
+channels:
+- conda-forge
+dependencies:
+- go=1.20.*

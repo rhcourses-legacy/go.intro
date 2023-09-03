@@ -1,0 +1,15 @@
+#!/bin/bash
+set -eu
+
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOPATH/bin
+mkdir -p $GOPATH
+
+go version
+
+go install github.com/janpfeifer/gonb@latest
+
+go install golang.org/x/tools/cmd/goimports@latest
+go install golang.org/x/tools/gopls@latest
+
+gonb --install
